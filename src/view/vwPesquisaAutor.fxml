@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PesquisaAutorController">
+   <children>
+      <TableView fx:id="tvAutor" layoutX="-108.0" layoutY="-128.0" prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+        <columns>
+          <TableColumn fx:id="colunaId" prefWidth="38.0" text="ID" />
+          <TableColumn fx:id="colunaNome" prefWidth="361.0" text="Nome" />
+        </columns>
+      </TableView>
+      <Label layoutX="17.0" layoutY="14.0" text="Digite uma autor para pesquisar" />
+      <TextField fx:id="txtPesquisa" layoutX="17.0" layoutY="43.0" prefHeight="25.0" prefWidth="366.0" />
+   </children>
+</AnchorPane>

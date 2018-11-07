@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="800.0" layoutX="2.0" layoutY="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../img/Principal.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnUsuario" layoutX="107.0" layoutY="68.0" mnemonicParsing="false" onAction="#btnUsuarioOnAction" prefHeight="100.0" prefWidth="100.0">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0">
+               <image>
+                  <Image url="@../img/IconeUsuario.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnLivro" layoutX="107.0" layoutY="201.0" mnemonicParsing="false" onAction="#btnLivroOnAction" prefHeight="100.0" prefWidth="100.0">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0">
+               <image>
+                  <Image url="@../img/IconeLivro.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="145.0" layoutY="45.0" text="Usuario" />
+      <Label layoutX="152.0" layoutY="184.0" text="Livro" />
+      <Button fx:id="btnAutor" layoutX="277.0" layoutY="62.0" mnemonicParsing="false" onAction="#btnAutorOnAction" prefHeight="100.0" prefWidth="100.0">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0">
+               <image>
+                  <Image url="@../img/IconeAutor.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnEditra" layoutX="277.0" layoutY="201.0" mnemonicParsing="false" onAction="#btnEditoraOnAction" prefHeight="100.0" prefWidth="100.0">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0">
+               <image>
+                  <Image url="@../img/IconeEditora.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Label layoutX="320.0" layoutY="45.0" text="Autor" />
+      <Label layoutX="316.0" layoutY="184.0" text="Editora" />
+      <Button fx:id="btnRelatorios" layoutX="124.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnRelatoriosOnAction" prefHeight="50.0" prefWidth="250.0" text="Relatórios" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="295.0" layoutY="337.0">
+         <image>
+            <Image url="@../img/IconeRelatorio.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

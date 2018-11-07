@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LivroController">
+   <children>
+      <Pane layoutX="-299.0" layoutY="-270.0" prefHeight="450.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="369.0" layoutY="14.0" text="Livros">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="25.0" layoutY="70.0" text="ID:" />
+            <Label layoutX="111.0" layoutY="70.0" text="Titulo:" />
+            <Label layoutX="25.0" layoutY="130.0" text="Descrição" />
+            <Label layoutX="235.0" layoutY="360.0" text="Ano de Publicação:" />
+            <Label layoutX="508.0" layoutY="360.0" text="Data Aquisição: " />
+            <Label layoutX="25.0" layoutY="360.0" text="Edição:" />
+            <Label layoutX="25.0" layoutY="330.0" text="Autor: " />
+            <Label layoutX="294.0" layoutY="330.0" text="Editora:" />
+            <Label layoutX="25.0" layoutY="300.0" text="Categoria:" />
+            <TextField fx:id="txtId" disable="true" layoutX="51.0" layoutY="66.0" prefHeight="25.0" prefWidth="54.0" />
+            <TextArea fx:id="txtDescricao" layoutX="23.0" layoutY="150.0" prefHeight="112.0" prefWidth="755.0" />
+            <TextField fx:id="txtTitulo" layoutX="159.0" layoutY="66.0" prefHeight="25.0" prefWidth="579.0" />
+            <Label layoutX="221.0" layoutY="100.0" text="Sub-Titulo:" />
+            <TextField fx:id="txtSubTitulo" layoutX="285.0" layoutY="96.0" prefHeight="25.0" prefWidth="493.0" />
+            <Label layoutX="25.0" layoutY="100.0" text="ISBN:" />
+            <TextField fx:id="txtIsbn" layoutX="60.0" layoutY="96.0" />
+            <CheckBox fx:id="chCatVerde" layoutX="91.0" layoutY="301.0" mnemonicParsing="false" onAction="#chCatVerdeOnAction" text="Verde">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../img/CatVerde.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </CheckBox>
+            <Label layoutX="25.0" layoutY="270.0" text="Tags:" />
+            <TextField fx:id="txtTag" layoutX="60.0" layoutY="266.0" prefHeight="25.0" prefWidth="718.0" promptText="Digite as Tags separados por Ponto e Virgula ;" />
+            <CheckBox fx:id="chCatVermelho" layoutX="200.0" layoutY="300.0" mnemonicParsing="false" onAction="#chCatVermelhoOnAction" text="Vermelho">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../img/CatVermelha.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </CheckBox>
+            <TextField fx:id="txtAutor" disable="true" layoutX="73.0" layoutY="326.0" prefHeight="25.0" prefWidth="28.0" />
+            <TextField fx:id="txtEditora" disable="true" layoutX="346.0" layoutY="326.0" prefHeight="25.0" prefWidth="28.0" />
+            <TextField fx:id="txtEdicao" layoutX="73.0" layoutY="356.0" />
+            <TextField fx:id="txtAnoPub" layoutX="345.0" layoutY="356.0" prefHeight="25.0" prefWidth="149.0" />
+            <DatePicker fx:id="txtDataAquisicao" layoutX="603.0" layoutY="356.0" />
+            <Button fx:id="btnNovo" layoutX="60.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnNovoOnAction" prefHeight="20.0" prefWidth="125.0" text="Novo" />
+            <Button fx:id="btnCadastrar" layoutX="230.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnCadastrarOnAction" prefHeight="20.0" prefWidth="125.0" text="Cadastrar" />
+            <Button fx:id="btnGravar" layoutX="400.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnGravarOnAction" prefHeight="20.0" prefWidth="125.0" text="Gravar Alterações" />
+            <Button fx:id="btnDeletar" layoutX="570.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnDeletarOnAction" prefHeight="20.0" prefWidth="125.0" text="Deletar" />
+            <Label layoutX="63.0" layoutY="321.0" text="*" textFill="#ff3300">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="334.0" layoutY="321.0" text="*" textFill="#ff3300">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="149.0" layoutY="61.0" text="*" textFill="#ff3300">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnPesquisar" layoutX="745.0" layoutY="67.0" mnemonicParsing="false" onAction="#btnPesquisarOnAction">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0">
+                     <image>
+                        <Image url="@../img/IconeLupa.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="570.0" layoutY="329.0" text="Valor:" />
+            <TextField fx:id="txtValor" layoutX="608.0" layoutY="325.0" prefHeight="25.0" prefWidth="61.0" />
+            <Label layoutX="674.0" layoutY="330.0" text="Nº Pag.:" />
+            <TextField fx:id="txtPaginas" layoutX="722.0" layoutY="326.0" prefHeight="25.0" prefWidth="58.0" />
+            <CheckBox fx:id="chCatAmarelo" layoutX="331.0" layoutY="301.0" mnemonicParsing="false" onAction="#chCatAmareloOnAction" text="Amarelo">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../img/CatAmarelo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </CheckBox>
+            <CheckBox fx:id="chCatAzul" layoutX="454.0" layoutY="301.0" mnemonicParsing="false" onAction="#chCatAzulOnAction" text="Azul">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../img/CatAzul.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </CheckBox>
+            <TextField fx:id="txtNomeAutor" disable="true" layoutX="104.0" layoutY="326.0" prefHeight="25.0" prefWidth="116.0" />
+            <TextField fx:id="txtNomeEditora" disable="true" layoutX="377.0" layoutY="326.0" prefHeight="25.0" prefWidth="116.0" />
+            <Button fx:id="btnPesquisarAutor" layoutX="223.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnPesquisarAutorOnAction">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0">
+                     <image>
+                        <Image url="@../img/IconeLupa.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnPesquisarEditora" layoutX="498.0" layoutY="327.0" mnemonicParsing="false" onAction="#btnPesquisarEditoraOnAction">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0">
+                     <image>
+                        <Image url="@../img/IconeLupa.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnCadastrarEditora" layoutX="535.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnCadastrarEditoraOnAction">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0">
+                     <image>
+                        <Image url="@../img/IconeMais.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnCadastrarAutor" layoutX="259.0" layoutY="327.0" mnemonicParsing="false" onAction="#btnCadastrarAutorOnAction">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0">
+                     <image>
+                        <Image url="@../img/IconeMais.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

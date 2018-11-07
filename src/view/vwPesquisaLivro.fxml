@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PesquisaLivroController">
+   <children>
+      <TableView fx:id="tvLivro" layoutX="-108.0" layoutY="-128.0" prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+        <columns>
+          <TableColumn fx:id="colunaId" prefWidth="38.0" text="ID" />
+          <TableColumn fx:id="colunaTitulo" prefWidth="239.0" text="Titulos" />
+          <TableColumn fx:id="colunaSubTitulo" prefWidth="122.0" text="Sub-Titulo" />
+        </columns>
+      </TableView>
+      <Label layoutX="17.0" layoutY="14.0" text="Digite um livro para pesquisar" />
+      <TextField fx:id="txtPesquisa" layoutX="17.0" layoutY="43.0" prefHeight="25.0" prefWidth="366.0" />
+   </children>
+</AnchorPane>
